@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/flagship
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=flagship
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # Monitoring / Telemetry Service
+  telemetry:
+    build: .
+    command: python log_harvester.py
+    depends_on:
+      - app
+
+volumes:
+  postgres_data:
