@@ -20,6 +20,6 @@ jobs:
 
       - name: Terraform Apply
         run: |
-          cd project 19-terraform-blueprint
+          cd "flag5(cloud+inframesh)/project 19-terraform-blueprint"
           terraform init
           terraform apply -auto-approve
