@@ -18,6 +18,10 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      # Add this step to install Terraform
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+
       - name: Terraform Apply
         run: |
           cd "flag5(cloud+inframesh)/project 19-terraform-blueprint"
