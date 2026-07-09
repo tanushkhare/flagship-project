@@ -38,10 +38,10 @@ python api_gateway.py
 📈 Roadmap
 [x] Cloud Module Dynamic Routing
 
-[ ] ATS Module Refactor
+[x] ATS Module Refactor
 
-[ ] Insurance Module Refactor
+[x] Insurance Module Refactor
 
-[ ] Workspace Module Refactor
+[x] Workspace Module Refactor
 
-[ ] Security Module Refactor
+[x] Security Module Refactor
