@@ -1,0 +1,60 @@
+/* Updated Insurance Module Aesthetic */
+.insurance-container {
+    padding: 3rem; /* Increase breath around the page */
+    background: #0f172a;
+    min-height: 100vh;
+    color: #f8fafc;
+}
+
+.insurance-card {
+    background: rgba(30, 41, 59, 0.7); /* Deep Slate with transparency */
+    backdrop-filter: blur(12px);         /* Modern Blur Effect */
+    padding: 3rem;
+    border-radius: 1.5rem;               /* Rounder corners */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    max-width: 900px;                    /* Give it breadth */
+    margin: 2rem auto;
+}
+
+.insurance-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Professional gradient text */
+}
+
+.insurance-input {
+    width: 100%;
+    padding: 1.5rem;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    min-height: 250px;
+}
+/* Add/Update this in your RealtimeWorkspace.css */
+.response-box {
+  margin-top: 3rem;
+  padding: 3rem;
+  background: rgba(79, 70, 229, 0.1);
+  border-radius: 1rem;
+  border-left: 8px solid var(--accent);
+  line-height: 1.6;
+  
+  /* THIS IS THE KEY FIX */
+  overflow-x: auto;      /* Allows scrolling if the output is too wide */
+  white-space: pre-wrap; /* Forces long lines to wrap to the next line */
+  word-wrap: break-word; /* Prevents long words from breaking layout */
+}
+
+/* Ensure the pre tag inside also respects this */
+.response-box pre {
+  white-space: pre-wrap; 
+  word-wrap: break-word;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
