@@ -5,13 +5,15 @@ import uvicorn
 from routes import ats_routes, insurance_routes, workspace_routes, security_routes, cloud_routes
 
 app = FastAPI(title="Flagship Unified Portal Gateway")
-ALLOWED_ORIGINS = os.getenv("FRONTEND_URL", "http://localhost:3000")
-# Explicitly allow the preflight requests
+
+# Get the URL from environment variables, fallback to localhost for local dev
+ALLOWED_ORIGINS = os.getenv("FRONTEND_URL", "https://flagship-project-znyh.vercel.app")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000", 
-        "https://your-actual-vercel-app-name.vercel.app" # <--- ADD YOUR VERCEL URL HERE
+        "https://flagship-project-znyh.vercel.app",
         ALLOWED_ORIGINS
     ],
     allow_credentials=True,
