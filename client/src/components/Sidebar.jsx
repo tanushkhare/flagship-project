@@ -16,7 +16,7 @@ const Sidebar = () => {
     { path: "/work", label: "Realtime Workspace" },
     { path: "/sec", label: "Security DataOps" },
     { path: "/cloud", label: "Cloud Infra" },
-    { path: "/portfolio", label: "Portfolio Ecosystem" }
+    { path: "/portfolio", label: "🚀 Portfolio Ecosystem" }
   ];
 
   return (
