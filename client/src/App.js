@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import MainLayout from './layouts/MainLayout';
 import Dashboard from './pages/Dashboard';
 
+// Import Portfolio Showcase Page
+import PortfolioEcosystem from './PortfolioEcosystem';
+
 // Import Modules
 import ATSModule from './pages/ATS/ATSModule';
 import InsuranceModule from './pages/Insurance/InsuranceModule';
@@ -32,7 +35,6 @@ import Sec_P2 from './pages/Security/Sec_P2';
 import Sec_P3 from './pages/Security/Sec_P3';
 import Sec_P4 from './pages/Security/Sec_P4';
 
-
 function App() {
   return (
     <Router>
@@ -47,6 +49,9 @@ function App() {
           <Route path="flagship3" element={<Navigate to="/work" replace />} />
           <Route path="flagship4" element={<Navigate to="/sec" replace />} />
           <Route path="flagship5" element={<Navigate to="/cloud" replace />} />
+
+          {/* 23-Microservice Portfolio Route */}
+          <Route path="portfolio" element={<PortfolioEcosystem />} />
           
           {/* Module Routes */}
           <Route path="ats" element={<ATSModule />}>
@@ -71,11 +76,11 @@ function App() {
           </Route>
 
           <Route path="cloud" element={<CloudPage />}>
-          {/* We pass the index prop directly in the route */}
-          <Route path="p1" element={<Cloud_SubPage index={0} title="Elastic Compute Cluster" />} />
-          <Route path="p2" element={<Cloud_SubPage index={1} title="VPC Network Topography" />} />
-          <Route path="p3" element={<Cloud_SubPage index={2} title="Load Balancing Profiles" />} />
-          <Route path="p4" element={<Cloud_SubPage index={3} title="Edge Telemetry" />} />
+            {/* We pass the index prop directly in the route */}
+            <Route path="p1" element={<Cloud_SubPage index={0} title="Elastic Compute Cluster" />} />
+            <Route path="p2" element={<Cloud_SubPage index={1} title="VPC Network Topography" />} />
+            <Route path="p3" element={<Cloud_SubPage index={2} title="Load Balancing Profiles" />} />
+            <Route path="p4" element={<Cloud_SubPage index={3} title="Edge Telemetry" />} />
           </Route>
         </Route>
       </Routes>

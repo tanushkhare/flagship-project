@@ -10,13 +10,14 @@ const Sidebar = () => {
     transition: '0.3s'
   };
 
-  // Define the links array here
+  // Added Portfolio Ecosystem to navigation links
   const links = [
     { path: "/ats", label: "ATS Optimizer" },
     { path: "/ins", label: "Insurance Claims" },
     { path: "/work", label: "Realtime Workspace" },
     { path: "/sec", label: "Security DataOps" },
-    { path: "/cloud", label: "Cloud Infra" }
+    { path: "/cloud", label: "Cloud Infra" },
+    { path: "/portfolio", label: "🚀 Portfolio Ecosystem" }
   ];
 
   return (
