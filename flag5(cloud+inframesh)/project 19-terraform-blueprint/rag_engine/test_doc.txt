@@ -1,1 +1,0 @@
-The RAG engine is running successfully on AWS EC2.
