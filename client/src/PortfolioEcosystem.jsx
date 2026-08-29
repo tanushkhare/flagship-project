@@ -1,8 +1,8 @@
 ﻿import React, { useState } from 'react';
 
 const projects = [
-  { id: "01", name: "AI Resume Analyzer", category: "AI & NLP", repo: "ai-resume-analyzer", liveUrl: "https://ai-resume-analyzer-xbkoztexkx2dmvq.streamlit.app", desc: "spaCy NER PDF resume parser with cosine similarity matching." },
-  { id: "02", name: "Autonomous Research Assistant", category: "Agentic AI", repo: "autonomous-research-assistant", liveUrl: "https://autonomous-research-assistant-cvfika.streamlit.app", desc: "Agentic multi-hop research pipeline with source validation." },
+  { id: "01", name: "AI Resume Analyzer", category: "AI & NLP", repo: "ai-resume-analyzer", liveUrl: "https://ai-resume-analyzer-xbkoztexkx2dmvqv7mbpze.streamlit.app", desc: "spaCy NER PDF resume parser with cosine similarity matching." },
+  { id: "02", name: "Autonomous Research Assistant", category: "Agentic AI", repo: "autonomous-research-assistant", liveUrl: "https://autonomous-research-assistant-cvfikaelvk7cwutlxyhrkn.streamlit.app", desc: "Agentic multi-hop research pipeline with source validation." },
   { id: "03a", name: "Realtime Chatbot", category: "WebSockets", repo: "realtime-chatbot", liveUrl: "https://realtime-chatbot.streamlit.app", desc: "Asynchronous WebSocket streaming session assistant." },
   { id: "03b", name: "Vector RAG Q&A System", category: "Vector Search", repo: "vector-rag-qa-system", liveUrl: "https://vector-rag-app-system.streamlit.app", desc: "Dense vector retrieval engine with text chunking and similarity search." },
   { id: "04a", name: "AI Meeting Summarizer", category: "AI & NLP", repo: "ai-meeting-summarizer", liveUrl: "https://ai-meeting-summarizer9.streamlit.app", desc: "Audio transcript summarization and action item extractor." },
@@ -98,3 +98,4 @@ export default function PortfolioEcosystem() {
     </div>
   );
 }
+

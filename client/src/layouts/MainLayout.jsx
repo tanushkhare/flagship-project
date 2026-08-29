@@ -11,8 +11,8 @@ const coreModules = [
 ];
 
 const microprojects = [
-  { id: "01", name: "AI Resume Analyzer", liveUrl: "https://ai-resume-analyzer-xbkoztexkx2dmvq.streamlit.app" },
-  { id: "02", name: "Autonomous Research Assistant", liveUrl: "https://autonomous-research-assistant-cvfika.streamlit.app" },
+  { id: "01", name: "AI Resume Analyzer", liveUrl: "https://ai-resume-analyzer-xbkoztexkx2dmvqv7mbpze.streamlit.app" },
+  { id: "02", name: "Autonomous Research Assistant", liveUrl: "https://autonomous-research-assistant-cvfikaelvk7cwutlxyhrkn.streamlit.app" },
   { id: "03a", name: "Realtime Chatbot", liveUrl: "https://realtime-chatbot.streamlit.app" },
   { id: "03b", name: "Vector RAG Q&A System", liveUrl: "https://vector-rag-app-system.streamlit.app" },
   { id: "04a", name: "AI Meeting Summarizer", liveUrl: "https://ai-meeting-summarizer9.streamlit.app" },
@@ -110,3 +110,4 @@ export default function MainLayout() {
     </div>
   );
 }
+
