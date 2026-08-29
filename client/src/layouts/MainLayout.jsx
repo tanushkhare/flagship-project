@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const coreModules = [
   { path: "/ats", label: "ATS Optimizer", icon: "📄" },
@@ -36,19 +36,20 @@ const microprojects = [
   { id: "20", name: "IoT Energy Monitoring", liveUrl: "https://iot-energy-monitoring.streamlit.app" }
 ];
 
-export default function Sidebar() {
+export default function MainLayout() {
   return (
-    <aside style={{ width: '280px', background: '#0f172a', color: '#e2e8f0', height: '100vh', overflowY: 'auto', padding: '1.5rem 1rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-      <div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem', paddingLeft: '0.5rem' }}>
+    <div style={{ display: 'flex', height: '100vh', width: '100vw', overflow: 'hidden', backgroundColor: '#f8fafc' }}>
+      {/* Sidebar */}
+      <aside style={{ width: '280px', backgroundColor: '#0f172a', color: '#e2e8f0', display: 'flex', flexDirection: 'column', padding: '1.5rem 1rem', overflowY: 'auto', flexShrink: 0 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem', paddingLeft: '0.5rem' }}>
           <span style={{ fontSize: '1.5rem' }}>⚡</span>
           <h2 style={{ fontSize: '1.25rem', fontWeight: '800', color: '#fff', margin: 0 }}>Flagship Portal</h2>
         </div>
-        
+
         <div style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', color: '#64748b', letterSpacing: '0.05em', marginBottom: '0.75rem', paddingLeft: '0.5rem' }}>
           Core Modules
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', marginBottom: '2rem' }}>
           {coreModules.map((m) => (
             <NavLink
               key={m.path}
@@ -60,11 +61,10 @@ export default function Sidebar() {
                 padding: '0.65rem 0.75rem',
                 borderRadius: '6px',
                 color: isActive ? '#fff' : '#94a3b8',
-                background: isActive ? '#1e293b' : 'transparent',
+                backgroundColor: isActive ? '#1e293b' : 'transparent',
                 textDecoration: 'none',
                 fontSize: '0.9rem',
-                fontWeight: '500',
-                transition: 'all 0.2s'
+                fontWeight: '500'
               })}
             >
               <span>{m.icon}</span>
@@ -72,9 +72,7 @@ export default function Sidebar() {
             </NavLink>
           ))}
         </div>
-      </div>
 
-      <div>
         <div style={{ fontSize: '0.75rem', fontWeight: '700', textTransform: 'uppercase', color: '#64748b', letterSpacing: '0.05em', marginBottom: '0.75rem', paddingLeft: '0.5rem' }}>
           Microprojects (23)
         </div>
@@ -93,19 +91,22 @@ export default function Sidebar() {
                 borderRadius: '6px',
                 color: '#94a3b8',
                 textDecoration: 'none',
-                fontSize: '0.85rem',
-                fontWeight: '400',
-                transition: 'background 0.2s'
+                fontSize: '0.85rem'
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = '#1e293b'; e.currentTarget.style.color = '#38bdf8'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#94a3b8'; }}
+              onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#1e293b'; e.currentTarget.style.color = '#38bdf8'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.color = '#94a3b8'; }}
             >
               <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{p.name}</span>
-              <span style={{ fontSize: '0.8rem', color: '#38bdf8', opacity: 0.8 }}>↗</span>
+              <span style={{ fontSize: '0.8rem', color: '#38bdf8' }}>↗</span>
             </a>
           ))}
         </div>
-      </div>
-    </aside>
+      </aside>
+
+      {/* Main Content Area */}
+      <main style={{ flex: 1, height: '100%', overflowY: 'auto', padding: '2rem' }}>
+        <Outlet />
+      </main>
+    </div>
   );
 }
